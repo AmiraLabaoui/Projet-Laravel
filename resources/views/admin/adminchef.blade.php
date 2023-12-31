@@ -27,7 +27,7 @@
         </div>
         </form>
         <div>
-        <table bgcolor="black">
+        <table bgcolor="#939597">
           <tr>
             <th style="padding:30px;">Chef Name</th>
             <th style="padding:30px;">Speciality</th>

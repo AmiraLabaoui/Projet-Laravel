@@ -71,7 +71,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
+                            <!-- <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>  -->
                             <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
@@ -81,14 +81,17 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
                             </li>
-                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-        <li class="scroll-to-section"><a href="#reservation">Cart[0]</a></li>
-
-
-
-
-
-                            <li>
+                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
+                            <li class="scroll-to-section" style="background-color: red;"><a href="#reservation">
+                                @auth
+                                Cart{{$count}}
+                                @endauth
+                                @guest 
+                                Cart[0]
+                                @endguest</a>
+                        </li>
+                        
+                            <li class="scroll-to-section">
                                 @if (Route::has('login'))
                                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                                     @auth
@@ -103,7 +106,8 @@ https://templatemo.com/tm-558-klassy-cafe
                                 </div>
                                 @endif
                             </li> 
-                        </ul>        
+                        
+                    </ul>     
                         <a class='menu-trigger'>
                             <span></span>
                         </a>
@@ -172,7 +176,13 @@ https://templatemo.com/tm-558-klassy-cafe
                             <h6>About Us</h6>
                             <h2>We Leave A Delicious Memory For You</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+
+                        <p>Discover the elegance of coffee and culinary finesse at Klassy Coffee, a unique venue where coffee and restaurant seamlessly come together. Immerse yourself in a warm and sophisticated atmosphere, where each cup of coffee tells a story. Our refined menu offers special coffees and exquisite dishes, creating an unforgettable experience with every visit. Whether for a casual break or a business meeting, Klassy Coffee combines style and flavor to delight your senses. 
+                            <br>Join us for a gastronomic adventure where the art of coffee comes to life. Welcome to the Klassy universe, where every moment is a celebration of taste and refinement.
+                         <br>
+                        
+                        
+                        </p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">

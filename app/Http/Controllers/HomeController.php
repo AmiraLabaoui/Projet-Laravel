@@ -30,7 +30,9 @@ class HomeController extends Controller
     }
        else
        {
-        return view('home',compact("data","data2"));
+        $user_id=Auth::id();
+        $count=cart::where('user_id',$user_id)->count();
+        return view('home',compact("data","data2","count"));
        }
 
     }
