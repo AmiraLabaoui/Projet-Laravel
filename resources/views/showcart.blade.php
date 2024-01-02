@@ -1,3 +1,5 @@
+@extends('home')
+@section('cart')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,7 +88,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section" style="background-color: red;">
                                 @auth
                                 <a href="{{url('/showcart',Auth::user()->id)}}"></a>
-                                Cart{{$count}}
+                                Cart{{$Count}}
                                 @endauth
                                 @guest 
                                 Cart[0]
@@ -191,3 +193,4 @@ https://templatemo.com/tm-558-klassy-cafe
     </script>
   </body>
   </html> 
+  @endsection
