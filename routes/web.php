@@ -41,6 +41,8 @@ Route::get("/redirects",[HomeController::class,"redirects"]);
 
 Route::post("/updatefoodchef/{id}",[AdminController::class,"updatefoodchef"]);
 Route::get("/deletechef/{id}",[AdminController::class,"deletechef"]);
+Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
+Route::get("/remove/{id}",[HomeController::class,"remove"]);
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',
 ])->group(function () {
