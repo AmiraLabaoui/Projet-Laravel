@@ -1,5 +1,3 @@
-@extends('home')
-@section('cart')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +17,7 @@
 TemplateMo 558 Klassy Cafe
 
 https://templatemo.com/tm-558-klassy-cafe
-
+s
 -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -86,14 +84,15 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
                             <li class="scroll-to-section" style="background-color: red;">
+                                
+                                <a href="{{url('/showcart',Auth::user()->id)}}">
                                 @auth
-                                <a href="{{url('/showcart',Auth::user()->id)}}"></a>
-                                Cart{{$Count}}
+                                Cart{{$count}}
                                 @endauth
                                 @guest 
                                 Cart[0]
                                 @endguest
-                        </li>
+</a></li>
                         
                             <li class="scroll-to-section">
                                 @if (Route::has('login'))
@@ -193,4 +192,3 @@ https://templatemo.com/tm-558-klassy-cafe
     </script>
   </body>
   </html> 
-  @endsection

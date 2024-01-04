@@ -40,7 +40,7 @@ class HomeController extends Controller
     {
        if(Auth::id())
        {
-        $user_id=Auth::id();
+        $user_id=Auth::sid();
         $foodid=$id;
         $quantity=$request->quantity;
         $cart=new cart;
@@ -61,10 +61,10 @@ class HomeController extends Controller
     }
     public function showcart(Request $request,$id)
     {
-        $Count=cart::where('user_id',$id)->count();
+        $count=cart::where('user_id',$id)->count();
         $data2=cart::select('*')->where('user_id', '=' ,$id)->get();
         $data=cart::where('user_id',$id)->join('food', 'carts.food_id', '=' , 'food.id')->get();
-        return view('showcart',compact('Count','data','data2'));
+        return view('showcart',compact('count','data','data2'));
     }
     public function remove($id)
 {
